@@ -1100,7 +1100,7 @@ const Main = () => {
           If you're interested in discussing how I can bring my auditing expertise to your business, feel free to reach out. 
           </AboutMeText>
           <AboutMeText>
-          I'm always open for a chat about optimizing procedures, creating a top-notch kitchen environment, and ensuring your business meets the highest standards.
+          I'm always open for a chat about optimizing procedure, creating a top-notch kitchen environment, and ensuring your business meets the highest standards.
           </AboutMeText>
           <AboutMeText>
           Looking forward to connecting with you!
