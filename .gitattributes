@@ -1,4 +1,4 @@
-public/videos/Ricky-Morty.mov filter=lfs diff=lfs merge=lfs -text
-public/videos/Tasty-Palette.mov filter=lfs diff=lfs merge=lfs -text
-public/videos/Kitchen-Standard.mov filter=lfs diff=lfs merge=lfs -text
-public/videos/The-Frogger.mov filter=lfs diff=lfs merge=lfs -text
+# public/videos/Ricky-Morty.mov filter=lfs diff=lfs merge=lfs -text
+# public/videos/Tasty-Palette.mov filter=lfs diff=lfs merge=lfs -text
+# public/videos/Kitchen-Standard.mov filter=lfs diff=lfs merge=lfs -text
+# public/videos/The-Frogger.mov filter=lfs diff=lfs merge=lfs -text
