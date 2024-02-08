@@ -325,7 +325,7 @@ const Main = () => {
                 style={{
                   ...props,
                   display: i === index ? 'inline-block' : 'none',
-                  fontSize: i === index ? '3rem' : '2rem',
+                  fontSize: i === index ? '2rem' : '1rem',
                   fontWeight: 'bold',
                   color: i === index ? 'darkblue' : 'transparent',
                   
@@ -541,6 +541,7 @@ const BackgroundContainer = styled.div`
   background-repeat: no-repeat;
   background-position: left top;
   filter: brightness(100%);
+  width: 100%; /* Ensure container fills the entire viewport width */
 `;
 
 const ContainerContact = styled.div`
@@ -815,13 +816,21 @@ const AboutMeText = styled.div`
 `
 const AboutMe = styled.div`
   font-size: 50px;
-  color: ${(props) => props.theme.subHeader};transition: color 0.3s, background-color 0.3s;
+  color: ${(props) => props.theme.subHeader};
+  transition: color 0.3s, background-color 0.3s;
   margin: 0 0 20px;
   padding: 0 10px;
   display: flex;
   justify-content: center;
-  
-`
+
+  @media ${device.tablet} {
+    font-size: 40px; /* Change font size for tablets */
+  }
+
+  @media ${device.mobile} {
+    font-size: 30px; /* Change font size for mobile devices */
+  }
+`;
 
 const ContainerAbout = styled.div`
   display: flex;
@@ -878,22 +887,35 @@ const ContainerHead = styled.div`
 
   @media (max-width: 768px) {
     padding-top: 80px; /* Adjusted padding for mobile view */
+    width: 100%; /* Ensure container fills the viewport width on mobile */
+    box-sizing: border-box; /* Include padding in width calculation */
+    padding-right: 20px; /* Add some padding to the right to avoid content being too close to the edge */
+    padding-left: 20px; /* Add some padding to the left to avoid content being too close to the edge */
   }
 `;
 
+
+
 const AnimatedText = styled.div`
   font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
   text-align: center;
   margin-top: 20px; /* Adjusted margin-top */
   position: absolute;
-  bottom: 0; /* Position the text at the bottom */
-  right: 10px; /* Position the text at the right side of the page */
+  bottom: 10; /* Position the text at the bottom */
+  right: 2px; /* Position the text at the right side of the page */
   
   @media (max-width: 768px) {
-    font-size: 12px; /* Adjusted font size for mobile view */
+    font-size: 6px; /* Adjusted font size for mobile view */
     margin-top: 10px; /* Adjusted margin-top for mobile view */
+    justify-content: flex-end
+  }
+
+  @media (max-width: 480px) {
+    font-size: 6px; /* Further adjusted font size for smaller mobile view */
+    margin-top: 2px; /* Further adjusted margin-top for smaller mobile view */
+    
   }
 `;
 

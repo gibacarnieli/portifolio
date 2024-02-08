@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0aa87bed.css",
+    "main.js": "/static/js/main.c03890d0.js",
+    "static/js/592.d34da4b2.chunk.js": "/static/js/592.d34da4b2.chunk.js",
+    "static/media/carnieli2.png": "/static/media/carnieli2.ff6cfc942133233218a1.png",
+    "static/media/logo-transparent-png.png": "/static/media/logo-transparent-png.90999f220ff339755431.png",
+    "static/media/iso9001.png": "/static/media/iso9001.70395bb5864d5e87536a.png",
+    "static/media/Gil.jpg": "/static/media/Gil.05e7b2d3eceed4d5a045.jpg",
+    "static/media/postgresql.svg": "/static/media/postgresql.7bc394e86ea1f692d59a3d484ad156af.svg",
+    "static/media/github.svg": "/static/media/github.b2294bccaa20da50b7d58419f07c0892.svg",
+    "static/media/sass.svg": "/static/media/sass.903cef0c9879296f452e2bd0364f58e9.svg",
+    "static/media/django.svg": "/static/media/django.bd4cd03daaf2738327ded90509267116.svg",
+    "static/media/node-js.svg": "/static/media/node-js.2879fa1876f2b0e8ec70c8bae81f8446.svg",
+    "static/media/react.svg": "/static/media/react.a060cbe85e50deda1d61452cee9de5b2.svg",
+    "static/media/python.svg": "/static/media/python.026a62687ef705a39cfc755d7457859c.svg",
+    "static/media/mongodb.svg": "/static/media/mongodb.3beac5ba18197ccbdea6e2f53e18edcf.svg",
+    "static/media/javaScript.svg": "/static/media/javaScript.081325c6f229605dce15142ddd948d6d.svg",
+    "static/media/bootstrap.svg": "/static/media/bootstrap.91aad92a015faa64813b5f46723153a8.svg",
+    "static/media/heroku.svg": "/static/media/heroku.a29b3a87ca4f4b995d983f1e2d23ecb9.svg",
+    "static/media/figma.svg": "/static/media/figma.44ca2c329ade686d78f62ad73790c621.svg",
+    "static/media/css3.svg": "/static/media/css3.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
+    "static/media/html-5.svg": "/static/media/html-5.c1bb84e022ca9d76984d4b943bd678fd.svg",
+    "index.html": "/index.html",
+    "static/media/next-js.svg": "/static/media/next-js.dc303387daf332ab17b069b8c1c0309e.svg",
+    "static/media/npm.svg": "/static/media/npm.8c0606a7c392a7d33d03e67c80d6f40a.svg",
+    "main.0aa87bed.css.map": "/static/css/main.0aa87bed.css.map",
+    "main.c03890d0.js.map": "/static/js/main.c03890d0.js.map",
+    "592.d34da4b2.chunk.js.map": "/static/js/592.d34da4b2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0aa87bed.css",
+    "static/js/main.c03890d0.js"
+  ]
+}
