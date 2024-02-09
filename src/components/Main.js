@@ -430,14 +430,14 @@ const Main = () => {
             I love <b>traveling</b>. It's the most amazing feeling in the World.
           </AboutMeText>
           <AboutMeText>
-            I like to sightseeing, tasty new <b>Food</b>, make new friends and I absolutely love to cook.
+            I enjoy sightseeing, trying new <b>Foods</b>, making new friends and I absolutely love cooking.
           </AboutMeText>
           <AboutMeText>
-            When I have free time, I like to be update with the new technologies.
+            In my free time, I enjoy staying updated with new technologies.
           </AboutMeText>
           <InterestsPic>
             <ImagesInterests1> <WhiteCover>View of Amazing Malaga</WhiteCover></ImagesInterests1>
-            <ImagesInterests2> <WhiteCover>Been a chef 🍔👨🏼‍🍳</WhiteCover></ImagesInterests2>
+            <ImagesInterests2> <WhiteCover>Being a chef 🍔👨🏼‍🍳</WhiteCover></ImagesInterests2>
             <ImagesInterests3> <WhiteCover>Swimming in Malaga 🛟</WhiteCover></ImagesInterests3>
           </InterestsPic>
         </List>
