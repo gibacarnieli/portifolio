@@ -247,6 +247,7 @@ const tags = [
   },
 ];
 const names = ['Gilberto', 'Web Developer', 'Full Stack', 'Software Developer', 'Auditor'];
+
 const Main = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -310,8 +311,6 @@ const Main = () => {
     window.location.href = `mailto:carnieligilberto86@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
-
-
   return (
     <>
     <BackgroundContainer>
@@ -319,54 +318,49 @@ const Main = () => {
       <ContainerHead>
       <ProfileImage src={profileImageSrc} alt="Profile" />
       <div className="text-center mt-8 bg-gray-200 p-8">
-            {names.map((name, i) => (
-              <animated.div
-                key={i}
-                style={{
-                  ...props,
-                  display: i === index ? 'inline-block' : 'none',
-                  fontSize: i === index ? '2rem' : '1rem',
-                  fontWeight: 'bold',
-                  color: i === index ? 'darkblue' : 'transparent',
-                  
-                }}
-              >
-                {name.split('').map((char, charIndex) => (
-                  <animated.span
-                    key={charIndex}
-                    style={{
-                      opacity: props.opacity.interpolate((o) => o),
-                      display: 'inline-block',
-                      transform: 'translateX(0%)',
-                    }}
-                    className="text-[#969fa5] bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600"
-                  >
-                    {char}
-                  </animated.span>
-                ))}
-              </animated.div>
-            ))}
-          </div>
+      {names.map((name, i) => (
+  <animated.div
+    key={i}
+    style={{
+      ...props,
+      display: i === index ? 'inline-block' : 'none',
+      fontSize: i === index ? '2rem' : '1rem',
+      fontWeight: 'bold',
+      color: i === index ? 'darkblue' : 'transparent',
+    }}
+  >
+    {name.includes(" ") ? name : name.split('').map((char, charIndex) => (
+      <animated.span
+        key={charIndex}
+        style={{
+          opacity: props.opacity.interpolate((o) => o),
+          display: 'inline-block',
+          transform: 'translateX(0%)',
+        }}
+        className="text-[#969fa5] bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600"
+      >
+        {char}
+      </animated.span>
+    ))}
+  </animated.div>
+))}
+</div>
     </ContainerHead>
       
       <ContainerAbout id="aboutme">
         <Container width="850px">
         <AboutMe>About Me</AboutMe>
           <AboutMeText>
-            I’m Gilberto, a <b>Web Developer</b> based in Edinburgh. Having previously worked
-            in the hospitality industry for seven years, and also Quality Standard where I learned to be a <b> team member</b> and <b>solve problems under pressure</b>, as I'm Head Chef at my restaurtant
-            I have to work well under pressure.
+            Hi, I'm Gilberto.
           </AboutMeText>
           <AboutMeText>
-            I have Bsc in Administration with honours, coursed in Brazil, before I move to UK. I'm always looking for study new fields and learn maximum I can to improve my skills.
-            Throughout my life I have tried to take fast small courses to always keep myself up to date.
+          With a background spanning Chef, Auditor, and Administration, I've transitioned into <b>Web Development</b> driven by a passion for exploring new possibilities. My diverse experience has honed skills in organisation, collaboration, and problem-solving, all vital for success as a Software Engineer.
           </AboutMeText>
           <AboutMeText>
-            I always loved Websites, and I started to code myself some pages for learn and get better.
-            To get well prepered for a future job, I started a Software Engineering Immersive at <b>General Assembly</b>.
+          Completing a Software Engineering bootcamp with <b>General Assembly</b> has further enhanced my technical and soft skills.
           </AboutMeText>
           <AboutMeText>
-            I'm also a Internal Auditor in ISO 9001, ISO 14001 and ISO 45001.
+          I’m now seeking to apply this knowledge across various industries, bridging the gap between hospitality and technology to deliver impactful solutions for clients.
           </AboutMeText>
         </Container>
       </ContainerAbout>
@@ -425,39 +419,28 @@ const Main = () => {
                   </Buttons>
                 </ProjectContent>
               </Card>
-            // </ScrollAnimation>
           ))}
         </Container>
       </ContainerProjects>
       
       <Hobbies>
-        <AboutMe></AboutMe>
+        <AboutMe>Hobbies & Interests</AboutMe>
         <List>
           <AboutMeText>
-          My expertise lies in meticulously checking procedures and creating an optimized kitchen environment. I thoroughly enjoy applying my skills to enhance operational efficiency and ensure compliance.
+            I love <b>traveling</b>. It's the feeling in the World.
           </AboutMeText>
           <AboutMeText>
-          If you're interested in discussing how I can bring my auditing expertise to your business, feel free to reach out. 
+            I like to sightseeing, tasty new <b>Food</b>, make new friends and I absolutely love to cook.
           </AboutMeText>
           <AboutMeText>
-          I'm always open for a chat about optimizing procedure, creating a top-notch kitchen environment, and ensuring your business meets the highest standards.
+            When I have free time, I like to be update with new technologies.
           </AboutMeText>
-          <AboutMeText>
-          Looking forward to connecting with you!
-          </AboutMeText>
-
-          <AboutMeText>
-            <p>
-            </p>
-          </AboutMeText>
-          <ContactForm>
-            <label>Email:</label>
-            <input type="email" value={email} onChange={handleEmailChange} required />
-            <label>Message:</label>
-            <textarea value={message} onChange={handleMessageChange} required />
-            <button onClick={handleSendEmail}>Send Message</button>
-          </ContactForm>
-          </List>
+          <InterestsPic>
+            <ImagesInterests1> <WhiteCover>View of Amazing Malaga</WhiteCover></ImagesInterests1>
+            <ImagesInterests2> <WhiteCover>Been a chef 🍔👨🏼‍🍳</WhiteCover></ImagesInterests2>
+            <ImagesInterests3> <WhiteCover>Swimming in Malaga 🐈‍</WhiteCover></ImagesInterests3>
+          </InterestsPic>
+        </List>
       </Hobbies>
       <ContainerContact id="contact">
           
@@ -466,6 +449,8 @@ const Main = () => {
     </>
   );
 };
+
+
 
 const ProfileImage = styled.img`
   position: absolute;
@@ -545,59 +530,76 @@ const BackgroundContainer = styled.div`
 `;
 
 const ContainerContact = styled.div`
-  background-color: black;
+  background-color: white; /* Change background color to white */
   margin-top: -100px; /* Adjust as needed */
 `;
 
-const InterestsPic = styled.div`...`;
-// eslint-disable-next-line no-unused-vars
-const ImagesInterests = styled.div`
-overflow: hidden;
-background-size: cover;
-width: 300px;
-height: 370px;
-margin: 35px 20px 0;
-border-radius: 5px;
-position: relative;
-`
-const WhiteCover = styled.div`
-background: rgba(255,255,255, 1);
-font-family: 'Bebas Neue', cursive;
-letter-spacing: 1.5px;
-opacity: 0;
-position: absolute;
-height: 50px;
-bottom: 0;
-right: 0;
-left: 0;
+const InterestsPic = styled.div`
 display: flex;
 justify-content: center;
-align-items: center;
-color: black;
-font-weight: bold;
-font-size: 20px;
-transform: translate( 0, 100%);
-transition: all 0.5s;
-${ImagesInterests}:hover & {
-  opacity: 1;
-  transform: translate( 0, 0)
+flex-wrap: wrap;
+font-family: 'Courier New', Courier, monospace;
+@media ${device.desktop} {
   }
 `
+
+const ImagesInterests = styled.div`
+  overflow: hidden;
+  background-size: cover;
+  width: 300px;
+  height: 370px;
+  margin: 35px 20px 0;
+  border-radius: 5px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: calc(50% - 20px); /* Adjust width for tablets */
+  }
+
+  @media (max-width: 480px) {
+    width: 100%; /* Set width to 100% for mobile */
+  }
+`;
+
+const WhiteCover = styled.div`
+  background: rgba(255, 255, 255, 1);
+  font-family: 'Arial', cursive;
+  letter-spacing: 1.5px;
+  opacity: 0;
+  position: absolute;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transform: translate(0, 100%);
+  transition: all 0.5s;
+  ${ImagesInterests}:hover & {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+`;
+
 const ImagesInterests1 = styled(ImagesInterests)`
-background-image: url(/first.jpg);
+background-image: url(/hobbie4.jpg);
 `
 const ImagesInterests2 = styled(ImagesInterests)`
-background-image: url(/second.jpg);
+background-image: url(/robbies1.jpg);
 `
 const ImagesInterests3 = styled(ImagesInterests)`
-background-image: url(/third.JPG);
+background-image: url(/robbies3.JPG);
 
 `
 
 const Hobbies = styled.div`
-  background-color: lightgrey;
+  background-color: white; /* Change background color to white */
   transition: color 0.3s, background-color 0.3s;
-  padding: 100px 0 300px; // Adjust bottom padding as needed
+  padding: 0 0 300px; /* Adjust bottom padding as needed */
 `;
 
 const List = styled.ul`
@@ -686,7 +688,7 @@ const Tag = styled.div`
 `;
 
 const ContainerSkills = styled.div`
-  background-color: ${(props) => props.theme.skills};
+  background-color: white; /* Change background color to white */
   transition: color 0.3s, background-color 0.3s;
   padding: 100px 0 100px; /* Adjusted padding */
   margin-top: -30px; /* Adjusted margin-top */
@@ -806,9 +808,10 @@ const ContainerProjects = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: ${(props) => props.theme.projectsBackground};transition: color 0.3s, background-color 0.3s;
-  padding: 100px 0;
-`
+  background-color: white; /* Change background color to white */
+  transition: color 0.3s, background-color 0.3s;
+  padding: 30px 10px;
+`;
 const AboutMeText = styled.div`
   font-size: 20px;
   margin: 10px 0;
@@ -874,7 +877,7 @@ const HeadImage = styled.div`
   position: relative;
 `
 const ContainerHead = styled.div`
-  background-color: lightgrey;
+  background-color: white; /* Change background color to white */
   color: #fff; /* Set text color to white or any suitable color */
   transition: color 0.3s, background 0.3s;
   
@@ -884,13 +887,16 @@ const ContainerHead = styled.div`
   padding-top: 120px; /* Increase padding-top for a taller container */
   height: 200px; /* Adjust the height as needed */
   position: relative;
+  text-align: right; /* Align text to the right side */
 
   @media (max-width: 768px) {
     padding-top: 80px; /* Adjusted padding for mobile view */
     width: 100%; /* Ensure container fills the viewport width on mobile */
     box-sizing: border-box; /* Include padding in width calculation */
-    padding-right: 20px; /* Add some padding to the right to avoid content being too close to the edge */
-    padding-left: 20px; /* Add some padding to the left to avoid content being too close to the edge */
+    padding-right: 10px; /* Add some padding to the right to avoid content being too close to the edge */
+    padding-left: 10px; /* Add some padding to the left to avoid content being too close to the edge */
+    font-size: 16px; /* Make font size smaller for mobile view */
+    align-items: flex-end;
   }
 `;
 
@@ -909,13 +915,15 @@ const AnimatedText = styled.div`
   @media (max-width: 768px) {
     font-size: 6px; /* Adjusted font size for mobile view */
     margin-top: 10px; /* Adjusted margin-top for mobile view */
-    justify-content: flex-end
+    right: auto; /* Remove the right positioning */
+    left: 2px; /* Position the text at the left side of the page */
+    bottom: 2px; /* Adjust bottom positioning for mobile view */
+    text-align: right; /* Align text to the right for mobile view */
   }
 
   @media (max-width: 480px) {
     font-size: 6px; /* Further adjusted font size for smaller mobile view */
     margin-top: 2px; /* Further adjusted margin-top for smaller mobile view */
-    
   }
 `;
 
