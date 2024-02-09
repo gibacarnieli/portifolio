@@ -246,7 +246,7 @@ const tags = [
     description: "ISO 45001 - Occupational health and safety management system standard",
   },
 ];
-const names = ['Gilberto', 'Web Developer', 'Full Stack', 'Software Developer', 'Auditor'];
+const names = ['Hi, I am Gilberto! Welcome to my Portfolio', 'Web Developer', 'Full Stack', 'Software Developer'];
 
 const Main = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -351,7 +351,7 @@ const Main = () => {
         <Container width="850px">
         <AboutMe>About Me</AboutMe>
           <AboutMeText>
-            Hi, I'm Gilberto.
+            At my Portfolio you will found a bit about me, starting from the picture of my Family Crest that I'm very proud of.
           </AboutMeText>
           <AboutMeText>
           With a background spanning Chef, Auditor, and Administration, I've transitioned into <b>Web Development</b> driven by a passion for exploring new possibilities. My diverse experience has honed skills in organisation, collaboration, and problem-solving, all vital for success as a Software Engineer.
@@ -427,18 +427,18 @@ const Main = () => {
         <AboutMe>Hobbies & Interests</AboutMe>
         <List>
           <AboutMeText>
-            I love <b>traveling</b>. It's the feeling in the World.
+            I love <b>traveling</b>. It's the most amazing feeling in the World.
           </AboutMeText>
           <AboutMeText>
             I like to sightseeing, tasty new <b>Food</b>, make new friends and I absolutely love to cook.
           </AboutMeText>
           <AboutMeText>
-            When I have free time, I like to be update with new technologies.
+            When I have free time, I like to be update with the new technologies.
           </AboutMeText>
           <InterestsPic>
             <ImagesInterests1> <WhiteCover>View of Amazing Malaga</WhiteCover></ImagesInterests1>
             <ImagesInterests2> <WhiteCover>Been a chef 🍔👨🏼‍🍳</WhiteCover></ImagesInterests2>
-            <ImagesInterests3> <WhiteCover>Swimming in Malaga 🐈‍</WhiteCover></ImagesInterests3>
+            <ImagesInterests3> <WhiteCover>Swimming in Malaga 🛟</WhiteCover></ImagesInterests3>
           </InterestsPic>
         </List>
       </Hobbies>
