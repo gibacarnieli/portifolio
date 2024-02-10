@@ -29,7 +29,7 @@ const LogoLink = styled.a`
 `;
 
 const Logo = styled.img`
-  width: 100%;
+  width: 120%;
 `;
 
 const NavLinksDiv = styled.div`

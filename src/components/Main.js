@@ -294,23 +294,6 @@ const Main = () => {
   }, [index]);
   
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
-
-  const handleSendEmail = () => {
-    // Construct email content
-    const subject = "Message from Portfolio Website";
-    const body = `Email: ${email}\n\nMessage: ${message}`;
-
-    // Open default email provider with pre-filled subject and body
-    window.location.href = `mailto:carnieligilberto86@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
-
   return (
     <>
     <BackgroundContainer>
