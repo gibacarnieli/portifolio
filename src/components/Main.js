@@ -334,7 +334,7 @@ const Main = () => {
         <Container width="850px">
         <AboutMe>About Me</AboutMe>
           <AboutMeText>
-            At my Portfolio you will found a bit about me, starting from the picture of my Family Crest that I'm very proud of.
+            On my Portfolio you will found a bit about me, starting from the picture of my Family Crest that I'm very proud of.
           </AboutMeText>
           <AboutMeText>
           With a background spanning Chef, Auditor, and Administration, I've transitioned into <b>Web Development</b> driven by a passion for exploring new possibilities. My diverse experience has honed skills in organisation, collaboration, and problem-solving, all vital for success as a Software Engineer.
